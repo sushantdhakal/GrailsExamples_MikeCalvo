@@ -1,0 +1,19 @@
+<form name="form" novalidate>
+    <legend>Edit Profile</legend>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" ng-model="user.name" name="uName" required=""/>
+        <span ng-show="form.uName.$error.required && (form.$submitted || form.uName.$touched)" class="error">Tell us your name.</span>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" ng-model="user.email" name="uEmail" required=""/>
+        <span ng-show="form.uEmail.$error.required && (form.$submitted || form.uEmail.$touched)" class="error">Tell us your email.</span>
+        <span ng-show="form.uEmail.$error.email && (form.$submitted || form.uEmail.$touched)" class="error">This is not a valid email.</span>
+    </div>
+
+    <button type="button" ng-click="form.$setPristine();form.$setUntouched()" class="btn">Reset</button>
+    <button type="submit" ng-class="{'disabled': form.$invalid}" name="ok" class="btn">OK</button>
+</form>

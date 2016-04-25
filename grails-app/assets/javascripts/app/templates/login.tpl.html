@@ -1,0 +1,16 @@
+
+<legend>Login</legend>
+
+<uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index, 1)">{{alert.msg}}</uib-alert>
+
+<div class="form-group">
+    <label>Username</label>
+    <input ng-model="loginAttempt.username"/>
+</div>
+
+<div class="form-group">
+    <label>Password</label>
+    <input type="password" ng-model="loginAttempt.password">
+</div>
+
+<button ng-click="doLogin()">Login</button>

@@ -1,0 +1,17 @@
+Thumbs.db
+.DS_Store
+.gradle
+build/
+.idea
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+classes
+.asscache
+TESTS-*.xml
+grails-app/assets/bower
+node_modules/
+coverage/
